@@ -1,5 +1,8 @@
 import * as React from "react";
 
+import Footer from "./footer";
+import Header from "./header";
+
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -7,16 +10,9 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer></footer>
-      </div>
+      <Header />
+      <main>{children}</main>
+      <Footer />
     </>
   );
 };
