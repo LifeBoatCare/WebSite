@@ -4,7 +4,7 @@ const Image = require("../images/footer.svg") as string;
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-royal-blue text-white relative grid grid-cols-1 md:grid-cols-3">
+    <footer className="bg-royal-blue text-white relative grid grid-cols-1 md:grid-cols-3">
       <div className="md:grid grid-rows-2">
         <div className="flex justify-center items-center flex-col md:flex-row mt-28 md:mt-8">
           <StaticImage
@@ -17,7 +17,12 @@ const Footer: React.FC = () => {
             width={125}
           />
           <div className="md:ml-10 text-center md:text-left">
-            <h1 className="text-2xl">LIFE BOAT</h1>
+            <h1
+              className="text-2xl"
+              style={{ textShadow: "0 4px 4px rgba(0, 0, 0, 0.25)" }}
+            >
+              LIFE BOAT
+            </h1>
             <h3 className="text-base">Rediscover Yourself</h3>
           </div>
         </div>
@@ -58,7 +63,7 @@ const Footer: React.FC = () => {
           <h3 className="text-base">Terms And Conditions</h3>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

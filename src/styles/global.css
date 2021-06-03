@@ -29,3 +29,8 @@ svg {
     max-height: 100%;
   }
 }
+
+.MenuBtn > svg {
+  width: 30px;
+  height: 30px;
+}
