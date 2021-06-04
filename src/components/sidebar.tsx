@@ -45,7 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   };
 
   return (
-    <div className="block sm:hidden fixed h-full w-full top-0 left-0 z-10">
+    <div className="block sm:hidden fixed h-full w-full top-0 left-0 z-30">
       <div
         className={`absolute inset-0 bg-black transition-colors duration-500 ${
           isOpen ? "bg-opacity-50" : "bg-opacity-0"

@@ -6,15 +6,20 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-@supports (
-  (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))
-) {
+@support s (
+     
+  (-we  bkit-backdrop-filter: bl,ur(10px)) or (backdrop-filter: blur(10px))
+   ) {
   .glass-effect {
-    background-color: rgba(255, 255, 255, 0.5);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(10px);
   }
 }
+
+/* html {
+  scroll-snap-type: y proximity;
+} */
 
 svg {
   display: block;
@@ -33,4 +38,22 @@ svg {
 .MenuBtn > svg {
   width: 30px;
   height: 30px;
+}
+
+.HomeVector svg {
+  width: auto;
+  max-width: none;
+  min-width: 100vw;
+  max-height: 100%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 1024px) {
+  .HomeVector svg {
+    width: auto;
+    height: calc(100vh - 160px);
+    max-width: none;
+    min-width: 100vw;
+    max-height: 100%;
+  }
 }

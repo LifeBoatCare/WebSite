@@ -11,7 +11,12 @@ const Testimonials: React.FC = () => {
 
   return (
     <div className="text-center bg-skye-blue">
-      <h1 className="text-3xl pt-12 pb-12 md:pb-28 text-royal-blue ">
+      <h1
+        className="text-3xl pt-12 pb-12 md:pb-28 text-royal-blue"
+        style={{
+          scrollSnapAlign: "start",
+        }}
+      >
         TESTIMONIALS
       </h1>
 

@@ -6,7 +6,12 @@ const Ratings = require("../images/ratings.svg") as string;
 
 const Features: React.FC = () => {
   return (
-    <div className="bg-skye-blue ">
+    <div
+      className="bg-skye-blue"
+      style={{
+        scrollSnapAlign: "start",
+      }}
+    >
       <h1 className="text-royal-blue text-3xl ml-12 md:ml-24 pt-12">
         | FEATURES
       </h1>

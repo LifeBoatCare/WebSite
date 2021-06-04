@@ -7,11 +7,12 @@ import Testimonials from "../components/testimonials";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import Home from "../components/home";
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" description="Hello" />
-    {/* <div className="h-screen"></div> */}
+    <Home />
     <Features />
     <Description />
     <Testimonials />

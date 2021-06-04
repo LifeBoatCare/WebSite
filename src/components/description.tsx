@@ -13,7 +13,12 @@ const Description: React.FC = () => {
   const width = window.innerWidth;
 
   return (
-    <div className="bg-peach-yellow text-center md:grid md:place-items-center w-screen">
+    <div
+      className="bg-peach-yellow text-center md:grid md:place-items-center w-full"
+      style={{
+        scrollSnapAlign: "start",
+      }}
+    >
       <h1 className="text-royal-blue text-3xl font-normal pt-12">
         HOW LIFEBOAT WORKS?
       </h1>
@@ -85,43 +90,7 @@ const Description: React.FC = () => {
         </button>
       </div>
 
-      {/* <div className="pb-40 w-screen">
-        <Swiper
-          slidesPerView={width > 640 ? 3 : 1}
-          spaceBetween={5}
-          pagination={{
-            clickable: true,
-          }}
-          centeredSlides={true}
-        >
-          <SwiperSlide className="flex justify-center">
-            <div className="bg-juicy-peach-yellow h-80 w-80 px-6 flex items-center flex-col justify-center text-center rounded-lg">
-              <Advanatage />
-              <h1 className="text-xl mt-6 pb-10 text-royal-blue">
-                Advantage 1
-              </h1>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <div className="bg-juicy-peach-yellow h-80 w-80 px-6 flex items-center flex-col justify-center text-center rounded-lg">
-              <Advanatage />
-              <h1 className="text-xl mt-6 pb-10 text-royal-blue">
-                Advantage 2
-              </h1>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <div className="bg-juicy-peach-yellow h-80 w-80 px-6 flex items-center flex-col justify-center text-center rounded-lg">
-              <Advanatage />
-              <h1 className="text-xl mt-6 pb-10 text-royal-blue">
-                Advantage 3
-              </h1>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div> */}
-
-      <div className="pb-40 w-full">
+      <div className="pb-40 w-full overflow-hidden">
         <Swiper
           slidesPerView={width > 640 ? 3 : 1}
           spaceBetween={30}

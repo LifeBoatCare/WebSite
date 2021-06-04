@@ -23,54 +23,57 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="flex relative justify-center sm:justify-between items-center bg-light-blue p-4">
-        <button
-          className="MenuBtn block sm:hidden absolute focus:outline-none"
-          style={{ left: "5%" }}
-          onClick={() => {
-            setIsSideNavOpen(true);
-            setIsSideNavClosing(false);
-          }}
-        >
-          <MenuBtn />
-        </button>
-        <Link
-          to="/"
-          className="transition duration-500"
-          style={
-            isSideNavClosing
-              ? { transform: `translateX(0px)` }
-              : { transform: `translateX(-300px)` }
-          }
-        >
-          <div className="flex">
-            <StaticImage
-              src="../images/icon.png"
-              quality={100}
-              placeholder="tracedSVG"
-              formats={["auto", "webp", "avif"]}
-              alt="logo"
-              height={150}
-              width={150}
-              className="w-20 md:w-24"
-            />
-            <div className="p-2">
-              <h1 className="text-xl sm:text-2xl pl-1">LIFE BOAT</h1>
-              <h4 className="text-royal-blue text-xs sm:text-sm">
-                Rediscover Yourself
-              </h4>
+      <header className="fixed z-20 w-full">
+        <div className="flex relative justify-center sm:justify-between items-center bg-light-blue p-4 rounded-b-xl">
+          <button
+            className="MenuBtn block sm:hidden absolute focus:outline-none"
+            style={{ left: "5%" }}
+            onClick={() => {
+              setIsSideNavOpen(true);
+              setIsSideNavClosing(false);
+            }}
+          >
+            <MenuBtn />
+          </button>
+          <Link
+            to="/"
+            className="transition duration-500"
+            style={
+              isSideNavClosing
+                ? { transform: `translateX(0px)` }
+                : { transform: `translateX(-300px)` }
+            }
+          >
+            <div className="flex">
+              <StaticImage
+                src="../images/icon.png"
+                quality={100}
+                placeholder="tracedSVG"
+                formats={["auto", "webp", "avif"]}
+                alt="logo"
+                height={150}
+                width={150}
+                className="w-20 md:w-24"
+              />
+              <div className="p-2">
+                <h1 className="text-xl sm:text-2xl pl-1">LIFE BOAT</h1>
+                <h4 className="text-royal-blue text-xs sm:text-sm">
+                  Rediscover Yourself
+                </h4>
+              </div>
             </div>
-          </div>
-        </Link>
-        <nav className="hidden sm:block">
-          <ul className="flex">
-            <NavLink to="/">HOME</NavLink>
-            <NavLink to="/">FEATURES</NavLink>
-            <NavLink to="/">THERAPISTS</NavLink>
-            <NavLink to="/">FAQs</NavLink>
-          </ul>
-        </nav>
+          </Link>
+          <nav className="hidden sm:block">
+            <ul className="flex">
+              <NavLink to="/">HOME</NavLink>
+              <NavLink to="/">FEATURES</NavLink>
+              <NavLink to="/">THERAPISTS</NavLink>
+              <NavLink to="/">FAQs</NavLink>
+            </ul>
+          </nav>
+        </div>
       </header>
+
       {isSideNavOpen ? (
         <Sidebar
           setIsSideNavOpen={setIsSideNavOpen}

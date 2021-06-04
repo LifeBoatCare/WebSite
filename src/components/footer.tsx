@@ -1,6 +1,11 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+
 const Image = require("../images/footer.svg") as string;
+const Twitter = require("../images/twitter.svg") as string;
+const Pinterest = require("../images/pinterest.svg") as string;
+const Facebook = require("../images/facebook.svg") as string;
+const Instagram = require("../images/instagram.svg") as string;
 
 const Footer: React.FC = () => {
   return (
@@ -28,27 +33,14 @@ const Footer: React.FC = () => {
         </div>
         <div className="md:grid grid-cols-2">
           <div className="hidden md:block"></div>
-          <div className="flex pb-5 md:pb-0 justify-center md:justify-start items-start">
-            <StaticImage
-              src="../images/instagram.png"
-              quality={100}
-              placeholder="tracedSVG"
-              formats={["auto", "webp", "avif"]}
-              alt="instagram"
-              height={34}
-              width={32}
-              className="md:ml-4 m-3 md:m-0"
-            />
-            <StaticImage
-              src="../images/facebook.png"
-              quality={100}
-              placeholder="tracedSVG"
-              formats={["auto", "webp", "avif"]}
-              alt="facebook"
-              height={34}
-              width={32}
-              className="md:ml-4 m-3 md:m-0"
-            />
+          <div className="flex pb-5 md:pb-0 justify-center md:justify-start items-start pt-6 md:pt-0">
+            <Twitter />
+            <div className="w-4"></div>
+            <Pinterest />
+            <div className="w-4"></div>
+            <Instagram />
+            <div className="w-4"></div>
+            <Facebook />
           </div>
         </div>
       </div>
